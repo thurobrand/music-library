@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -16,8 +17,9 @@ import okhttp3.Response;
 
 @Service
 public class OpenAIService {
-    private static final String API_URL = "https://api.openai.com/v1/chat/completions";
-    private static final String API_KEY = "";
+    private static final String API_URL = "https://api.anthropic.com/v1/messages";
+    @Value("${openai.api.key}")
+    private String apiKey;
     private static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
 
     private final OkHttpClient client;
