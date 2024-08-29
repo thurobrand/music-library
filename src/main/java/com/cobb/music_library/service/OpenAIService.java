@@ -17,7 +17,7 @@ import okhttp3.Response;
 @Service
 public class OpenAIService {
     private static final String API_URL = "https://api.openai.com/v1/chat/completions";
-    private static final String API_KEY = "sk-SYwfUQPPM9MEmr4PkehSMhP3QAxf0KLzzuz_HTY49iT3BlbkFJtjNns-A8GFxbs2dQl2PeT5N-sW_EXxs8EJhu3hGQgA";
+    private static final String API_KEY = "";
     private static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
 
     private final OkHttpClient client;
